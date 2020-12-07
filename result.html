@@ -1,0 +1,491 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Result Page</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" />
+<link rel="stylesheet" href="dist/css/result.css">
+<link rel="stylesheet" href="https://e2eresearch.com/swteam/McKinsey/Assessment-app/OverlayScrollbars.css">
+</head>
+<body class="body-bg">
+
+<div class="wrapper" id="main-wrapper">
+    <header-panel :header-data="headerdata"></header-panel>
+    <data-panel :tables-data="tablesdata" :btn-data="btnData"></data-panel>
+</div>
+ <!--Main wrapper end-->
+ <span id="jsonData" style="display: none">{
+	"headerData": {
+		"logo": "https://e2eresearch.com/swteam/McKinsey/Assessment-app/mck-logo.svg",
+		"headerTitle": "Contact Center Walkthrough",
+		"leftPanelOpen": "true"
+	},
+	"btnData": {
+		"revVal": "Sc_Levers_Scale_1",
+		"revTxt": "Review Assessment",
+		"saveVal": "qResult",
+		"saveTxt": "Save",
+		"printTxt": "Download Results",
+		"lockVal": "localResult",
+		"lockTxt": "Lock my Result",
+		"readdOnly": "true",
+		"islockClick": "true",
+		"lastLine": "1)Significant improvement potential  2)Improvement potential  3)Functional operations  4)Best in class operations"
+	},
+	"tablesData": [{
+		"type": "over",
+		"headingTxt": "CC WalkThrough Overview",
+		"avgTxt": "Average",
+		"youTxt": "You",
+		"theadTxts": ["Categories", "Assessment criteria", "1", "2", "3", "4", "key observations (Example)"],
+		"trows": [{
+			"cat": "Strategy ",
+			"catLen": "1",
+			"subcri": " Strategy Clarity",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"keyObId": "OV_Observations_1"
+		}, {
+			"cat": "Organization ",
+			"catLen": "3",
+			"subcri": " Processes ",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"keyObId": "OV_Observations_2"
+		}, {
+			"cat": "",
+			"catLen": "3",
+			"subcri": " Governance &amp; Structure ",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"keyObId": "OV_Observations_3"
+		}, {
+			"cat": "",
+			"catLen": "3",
+			"subcri": " Culture",
+			"avgVal": "1",
+			"youVal": "4",
+			"keyOb": "",
+			"keyObId": "OV_Observations_4"
+		}],
+		"lastLine": "1)Significant improvement potential  2)Improvement potential  3)Functional operations  4)Best in class operations",
+		"kTAHead": "This is key take away",
+		"kTATxt": "Thsiis dream 11 team\naslfhlfhlfsdsd\n'\n''\n''''''''''''''''''''''''''''''''''''''''''\n\"\n\"\"\n\"\"\"\n\"\"\"\"",
+		"kTAId": "Ov_Recom_Action"
+	}, {
+		"type": "dd",
+		"headingTxt": "Deep dive Strategic Clarity",
+		"mda": "",
+		"avgTxt": "Average",
+		"youTxt": "You",
+		"theadTxts": ["Categories", "Assessment criteria", "1", "2", "3", "4", "key observations (Example)", "Recommended action(s)"],
+		"trows": [{
+			"cat": "Strategic Contact Center priorities",
+			"catLen": "4",
+			"subcri": "Overall strategy",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Sc_Action_1"
+		}, {
+			"cat": "",
+			"catLen": "4",
+			"subcri": "Internal CC alignment",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Sc_Action_2"
+		}, {
+			"cat": "",
+			"catLen": "4",
+			"subcri": "Role of customer care in overall customer service and sales strategy",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Sc_Action_3"
+		}, {
+			"cat": "",
+			"catLen": "4",
+			"subcri": "Call segment effectiveness",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Sc_Action_4"
+		}, {
+			"cat": "Strategy execution",
+			"catLen": "3",
+			"subcri": "Upstream improvement strategy",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Sc_Action_5"
+		}, {
+			"cat": "",
+			"catLen": "3",
+			"subcri": "Decision making intergration and connectedness",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Sc_Action_6"
+		}, {
+			"cat": "",
+			"catLen": "3",
+			"subcri": "Partcipation in E2E forums/Cross functional integration",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Sc_Action_7"
+		}, {
+			"cat": "Clarity of sourcing strategy (inc. Vendor compensation)",
+			"catLen": "4",
+			"subcri": "Sourcing strategy",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Sc_Action_8"
+		}, {
+			"cat": "",
+			"catLen": "4",
+			"subcri": "Vendor selection criteria",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Sc_Action_9"
+		}, {
+			"cat": "",
+			"catLen": "4",
+			"subcri": "Nature of relationship with vendors",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Sc_Action_10"
+		}, {
+			"cat": "",
+			"catLen": "4",
+			"subcri": "Contract pricing",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Sc_Action_11"
+		}],
+		"lastLine": "1)Significant improvement potential  2)Improvement potential  3)Functional operations  4)Best in class operations"
+	}, {
+		"type": "dd",
+		"headingTxt": "Deep dive Processes",
+		"mda": "",
+		"avgTxt": "Average",
+		"youTxt": "You",
+		"theadTxts": ["Categories", "Assessment criteria", "1", "2", "3", "4", "key observations (Example)", "Recommended action(s)"],
+		"trows": [{
+			"cat": "Documentation",
+			"catLen": "5",
+			"subcri": "Process Maps",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Proc_Action_1"
+		}, {
+			"cat": "",
+			"catLen": "5",
+			"subcri": "Operating Procedure",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Proc_Action_2"
+		}, {
+			"cat": "",
+			"catLen": "5",
+			"subcri": "Agent Skill Matrix",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Proc_Action_3"
+		}, {
+			"cat": "",
+			"catLen": "5",
+			"subcri": "Scripting and Agent Guide",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Proc_Action_4"
+		}, {
+			"cat": "",
+			"catLen": "5",
+			"subcri": "After interaction documentation",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Proc_Action_5"
+		}, {
+			"cat": "Quality",
+			"catLen": "13",
+			"subcri": "Authentication Process",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Proc_Action_6"
+		}, {
+			"cat": "",
+			"catLen": "13",
+			"subcri": "Customer communication",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Proc_Action_7"
+		}, {
+			"cat": "",
+			"catLen": "13",
+			"subcri": "Queueing logic",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Proc_Action_8"
+		}, {
+			"cat": "",
+			"catLen": "13",
+			"subcri": "Touchpoints",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Proc_Action_9"
+		}, {
+			"cat": "",
+			"catLen": "13",
+			"subcri": "Case Management",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Proc_Action_10"
+		}, {
+			"cat": "",
+			"catLen": "13",
+			"subcri": "Escalation Management",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Proc_Action_11"
+		}, {
+			"cat": "",
+			"catLen": "13",
+			"subcri": "Exception Handling",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Proc_Action_12"
+		}, {
+			"cat": "",
+			"catLen": "13",
+			"subcri": "Process automation",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Proc_Action_13"
+		}],
+		"lastLine": "1)Significant improvement potential  2)Improvement potential  3)Functional operations  4)Best in class operations"
+	}, {
+		"type": "dd",
+		"headingTxt": "Deep dive Governance &amp; Structure ",
+		"mda": "",
+		"avgTxt": "Average",
+		"youTxt": "You",
+		"theadTxts": ["Categories", "Assessment criteria", "1", "2", "3", "4", "key observations (Example)", "Recommended action(s)"],
+		"trows": [{
+			"cat": "Clarity of roles, responsibilities and governance",
+			"catLen": "5",
+			"subcri": "Org structure",
+			"avgVal": "1",
+			"youVal": "4",
+			"keyOb": "",
+			"ra": "",
+			"raId": "GS_Action_1"
+		}, {
+			"cat": "",
+			"catLen": "5",
+			"subcri": "Governance",
+			"avgVal": "1",
+			"youVal": "4",
+			"keyOb": "",
+			"ra": "",
+			"raId": "GS_Action_2"
+		}, {
+			"cat": "",
+			"catLen": "5",
+			"subcri": "Span of control",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "GS_Action_3"
+		}, {
+			"cat": "",
+			"catLen": "5",
+			"subcri": "Roles&amp;Responsibilities and KPI's",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "GS_Action_4"
+		}, {
+			"cat": "",
+			"catLen": "5",
+			"subcri": "Continuously improvement",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "GS_Action_5"
+		}, {
+			"cat": "Footprint (CC sites and specialization)",
+			"catLen": "2",
+			"subcri": "Hub structure",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "GS_Action_6"
+		}, {
+			"cat": "",
+			"catLen": "2",
+			"subcri": "Virtual agents",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "GS_Action_7"
+		}],
+		"lastLine": "1)Significant improvement potential  2)Improvement potential  3)Functional operations  4)Best in class operations"
+	}, {
+		"type": "dd",
+		"headingTxt": "Deep dive Culture ",
+		"mda": "",
+		"avgTxt": "Average",
+		"youTxt": "You",
+		"theadTxts": ["Categories", "Assessment criteria", "1", "2", "3", "4", "key observations (Example)", "Recommended action(s)"],
+		"trows": [{
+			"cat": "Communication &amp; feedback channels",
+			"catLen": "4",
+			"subcri": "Organizational health and effectiveness",
+			"avgVal": "1",
+			"youVal": "4",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Cul_Action_1"
+		}, {
+			"cat": "",
+			"catLen": "4",
+			"subcri": "Core Values",
+			"avgVal": "1",
+			"youVal": "4",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Cul_Action_2"
+		}, {
+			"cat": "",
+			"catLen": "4",
+			"subcri": "Mission Goal",
+			"avgVal": "1",
+			"youVal": "4",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Cul_Action_3"
+		}, {
+			"cat": "",
+			"catLen": "4",
+			"subcri": "Agent barometer and community forums",
+			"avgVal": "1",
+			"youVal": "4",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Cul_Action_4"
+		}, {
+			"cat": "Leadership development",
+			"catLen": "1",
+			"subcri": "Leadership development",
+			"avgVal": "1",
+			"youVal": "4",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Cul_Action_5"
+		}, {
+			"cat": "Agile management",
+			"catLen": "2",
+			"subcri": "Vision of  leadership and culture",
+			"avgVal": "1",
+			"youVal": "4",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Cul_Action_6"
+		}, {
+			"cat": "",
+			"catLen": "2",
+			"subcri": "Agile working culture",
+			"avgVal": "1",
+			"youVal": "3",
+			"keyOb": "",
+			"ra": "",
+			"raId": "Cul_Action_7"
+		}],
+		"lastLine": "1)Significant improvement potential  2)Improvement potential  3)Functional operations  4)Best in class operations"
+	}]
+}</span>
+
+    <div class="main-div" style="position:fixed;top:30px;left:0px;z-index:99;background-color:red;display:none;">
+        <input type="text" id="id1" />
+        <input type="text" id="id2" />
+        <input type="text" id="id3" />
+        <input type="text" id="id4" />
+        <input type="text" id="id5" />
+        <input type="text" id="id6" />
+        <input type="text" id="id7" />
+        <input type="text" id="id8" />
+        <input type="text" id="id9" />
+        <input type="text" id="id10" />
+        <input type="text" id="id11" />
+        <input type="text" id="id12" />
+        <input type="text" id="id13" />
+        <textarea  id="Ov_Recom_Action" ></textarea>
+
+    </div>
+
+
+    <input class="el1" type="text" name="navText" id="navText" style="position:fixed;top:0px;z-index:9999;display:block;" />
+    <input class="islockClick" type="text" name="islockClick" id="islockClick" style="position:fixed;top:0px;z-index:9999;display:block;left:100px;" />
+    <input type="hidden" id="forwardbutton" name="__fwd" tabindex="9998" class="navbutton confirmit-nav" onclick=" if(typeof wix=='object') {wix.nav(event, 'p1862356818');} " value="  >>  ">
+<script src="dist/js/vendor/vue.js" type="text/javascript"></script>
+<script src="dist/js/production/result.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+<script src="dist/js/vendor/html2pdf.bundle.js" type="text/javascript"></script>
+<script src="dist/js/vendor/then_ie11_polyfill.js"></script>
+
+
+
+</body>
+</html>
