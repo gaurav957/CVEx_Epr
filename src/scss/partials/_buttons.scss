@@ -7,7 +7,7 @@
   padding:8px 0;
   text-align: center;      
   cursor: pointer;
-  font-size: 1em;
+  font-size: 0.95em;
   @include transition(background-color 0.5s linear, color 0.5s linear);
   @media (max-width:1024px){
     width: 130px;
@@ -59,6 +59,9 @@
   }
  &:last-child{
   margin-right:0px;
+ }
+ &:empty{
+   display: none;
  }
 }
 

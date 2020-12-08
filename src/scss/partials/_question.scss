@@ -24,6 +24,7 @@
         .perc-data{
             width:220px;
             display: inline-block;
+            font-weight: 600;
             @media (max-width:1024px){
                 width: 100%;
                 display: block;
@@ -59,7 +60,7 @@
     .progress-panel-inner {
         border-bottom: 1px solid $light-gray;
         padding-bottom:10px;
-
+        font-size: 0.85em;
     }
 }
 
@@ -86,7 +87,7 @@
         padding: 5px 5px;
         position: absolute;
         z-index: 1;
-        top: 150%;
+        top: 150%;  
         left: -50%;
         margin-left: -60px;
         @media (max-width:767px){
@@ -143,7 +144,7 @@
     font-weight: normal;
     border: 1px solid $ee-clr;
     cursor: pointer;
-    font-size: 1.25em;
+    font-size: 0.85em;
    position: relative;
    @media (max-width:767px){
     font-size: 0.90em;
@@ -166,7 +167,7 @@
         color: $bl47-clr;
         font-size: 1.25em;
         font-weight: bold;       
-        top: 2px;
+        top: 4px;
         right: 15px;
         position: absolute;
     }
@@ -188,7 +189,7 @@
         padding-bottom: 10px;
         border-bottom: 1px solid $d3-clr;
         margin-bottom: 20px;
-        font-size: 1em;
+        font-size: 0.85em;
         @media (max-width:767px){
             font-size: 0.90em;
         }
@@ -198,7 +199,7 @@ display: none;
     }
     .survey-info-messg {
         color:$drak-gray;
-        font-size: 1em;
+        font-size: 0.85em;
     }
 }
  
@@ -227,7 +228,9 @@ display: none;
 .question-resize{
     margin-bottom:15px;
     .survey-info {
-        margin-bottom: 10px;
+        font-size: 0.85em;
+        margin-bottom: 25px;
+        line-height: 24px;
         .survey-info-messg{
             color: $drak-gray;
             font-weight: bold;
@@ -242,7 +245,7 @@ display: none;
         }
     //    .instruct-info{
     //         color:$drak-gray;
-    //         font-size: 1em;
+    //         font-size: 0.85em;
     //         position: relative;
     //         @media (min-width:1025px){
     //            padding-left:45px;
@@ -294,7 +297,7 @@ display: none;
     position: relative;
     .s-crad-header {
         padding: 8px 15px;
-        font-size: 1em;
+        font-size: 0.85em;
         font-weight: bold;
         background: $e1-clr;
         text-align: center;
@@ -307,7 +310,7 @@ display: none;
         padding: 15px;
         background:$f7-clr;
         color: $drak-gray;
-        font-size: 0.87em;
+        font-size: 0.85em;
         line-height: 20px;       
     }
    .survey-type-overlay{
@@ -320,14 +323,15 @@ display: none;
    }
 }
 .survey-info {
-    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom:25px;
 }
 .other-type-row {
     margin-top: 15px;
     margin-bottom: 15px;
     .other-quest {
         color: $btn-border;
-        font-size: 1em;
+        font-size: 0.85em;
         font-weight: 500;
         padding-bottom: 15px;
         &:empty{
@@ -342,7 +346,7 @@ display: none;
         border: 1px solid $input-bor;
         height: 32px;
         padding: 15px;
-        font-size: 1em;
+        font-size: 0.85em;
         color: $btn-border;
         @include box-shadow(0, 1PX, 1PX,  rgba(0,0,0,.075), inset);       
         @include transition(border-color .15s ease-in-out, box-shadow .15s ease-in-out);
@@ -369,7 +373,7 @@ display: none;
     // font-weight: bold;
     // background: $e1-clr;
     padding: 9px 15px;
-    font-size: 15px;
+    font-size: 0.85em;
      @media (min-width:481px){
         margin-right: 10px;
      }

@@ -6,7 +6,7 @@ Vue.component("right-panel", {
     <div class="survey-wrapper"> 
       <div class="scrollable">   
       <div class="accordian-inner" v-for="(category,catIn) in rightData.categories">
-        <h2 class="accordion" @click="openAccordion($event)" v-html='category.heading'></h2>
+        <h2 class="accordion active" @click="openAccordion($event)" v-html='category.heading'></h2>
         <div class="accordion-panel" >
           <div class="accordion-resize" >
             <div v-for="(subCategory,subCatIn) in category.subCategories">
@@ -16,7 +16,7 @@ Vue.component("right-panel", {
               class="question-resize"
             >
               <div class="survey-info">
-                <span class="survey-info-messg" v-html='question.quesText'></span>:
+                <span class="survey-info-messg" v-html='question.quesText'></span>
                 <span class="instruct-info"  v-if="question.quesDescription">                 
                   <span class="" v-html='question.quesDescription'></span>
                 </span>
@@ -44,7 +44,7 @@ Vue.component("right-panel", {
                </div>
                 <div class="other-type-row">
                   <div class="other-quest" v-html='rightData.cmntHeding'></div>
-                  <div class="other-form">
+                  <div class="other-form" style="display:none">
                     <input
                       type="text"
                       class="other-form-ctrl"
@@ -59,9 +59,7 @@ Vue.component("right-panel", {
             </div>
             </div>
           </div>
-
           </div>
-
         </div>
       </div>
       </div>

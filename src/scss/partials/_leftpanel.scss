@@ -98,7 +98,7 @@
   }
   .side-nav-wrapper .menu-list li .nav-item {
     padding: 20px 15px;
-    font-size: 1rem;
+    font-size: 0.85rem;;
     font-weight: normal;
     border-left: 5px solid transparent;
     cursor: pointer;
@@ -108,7 +108,13 @@
       background-color: #082336;
     }
     @media (max-width:767px){
-      font-size: 0.90em;
+      font-size: 0.80em;
+  }
+  & > span{
+    &:first-child{
+      display: inline-block;
+      width: calc(100% - 26px);
+    }
   }
 }
 .menuAnimate{
