@@ -78,6 +78,10 @@
 
 }
 
+.submit-hide{
+  display:none !important; //important means this rule will overwrite all rules
+}
+
 // .btn-item {
  
 //     &.save{

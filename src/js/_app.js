@@ -36,6 +36,7 @@ var eventInputvueObj = new Vue({
       this.$refs.leftPanel.PrevbtnClick();
     },
     NextPageBtnClckParent:function(){
+      
       this.$refs.leftPanel.NextbtnClick();
     },
     disPrevParent:function(){
@@ -63,6 +64,9 @@ var eventInputvueObj = new Vue({
     },
     setScrollHeight:function(){
       this.$refs.rightPanel.setScrollHeight();
+    },
+    updateSubmitinFooter:function(totalAnswered,totalQuestions){
+      this.$refs.footerPanel.updateSubmitinFooter(totalAnswered,totalQuestions);
     }
 
   },

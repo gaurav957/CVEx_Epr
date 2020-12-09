@@ -21,6 +21,7 @@ Vue.component("right-panel", {
                   <span class="" v-html='question.quesDescription'></span>
                 </span>
               </div>
+              <div id="errorDiv" class="error-message" v-html="rightData.errorMessage"></div>
               <div class="survey-type">
                 <div class="survey-row" :data-id="catIn+'_'+subCatIn+'_'+quesInd">
                   <div
@@ -85,6 +86,7 @@ Vue.component("right-panel", {
     });
     
   },
+  
   methods: {
     openAccordion: function(e){
       e.stopPropagation();
@@ -109,6 +111,7 @@ Vue.component("right-panel", {
     },
     handleAnswerSelect: function(dataId,catIn,subCatIn,quesInd){
       this.rightData.categories[catIn].subCategories[subCatIn].questions[quesInd].selected = dataId;
+      document.getElementById("errorDiv").style.visibility="hidden";
       if(document.getElementById(dataId)){
         document.getElementById(dataId).click();
       }
@@ -226,6 +229,9 @@ Vue.component("right-panel", {
         }
         this.$refs.prsPanel.udpdateGroupInfo(grouped);//calling child component
       })
+    },
+    updateSubmitinFooter:function(totalAnswered,totalQuestions){
+      this.$parent.updateSubmitinFooter(totalAnswered,totalQuestions);//calling parent
     }
   }
 
@@ -263,7 +269,7 @@ Vue.component("progress-panel", {
               <div class='btn-item frw' :class="rightData.readdOnly == true ? 'disable':'null'" v-html='progressData.saveTxt' @click=savePage>Save</div>
               <!--save-->
               <!--submit-->
-              <div class='btn-item frw' :class="this.submitStatus == false ? 'disable':'null'" @click=checkSubmitStatus(this.submitStatus) v-html='progressData.submitTxt' >Submit</div>
+              <div class='btn-item frw submit-hide' :class="this.submitStatus == false ? 'disable':'null'" @click=checkSubmitStatus(this.submitStatus) v-html='progressData.submitTxt' >Submit</div>
               <!--submit-->
             </div>
         </div>
@@ -297,6 +303,7 @@ Vue.component("progress-panel", {
       this.totalQuestions = totalQuestions;
       var percentage = parseInt((totalAnswered/totalQuestions)*100);
       this.totalPercentage = percentage;
+      this.$parent.updateSubmitinFooter(totalAnswered,totalQuestions);//calling parent right-panel
 
       //document.querySelector("#ttl-attmpt").value = totalAnswered;
       //document.querySelector("#cur-prcntge").value = percentage;

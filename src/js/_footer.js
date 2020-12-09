@@ -11,7 +11,7 @@ Vue.component("footer-panel", {
   template: `<div class="footer clearfix">
   <div class="navigation-block clearfix">
     <div class="right">
-      <span class="tt-ans"><span v-html="footerData.ttlCnt"></span> <span v-html="footerData.answrdQues"></span>/<span v-html="footerData.totalQues"></span></span>
+      <span class="tt-ans" ><span v-html="footerData.ttlCnt" ></span> <span v-html="footerData.answrdQues"></span>/<span v-html="footerData.totalQues"></span></span>
 		   <div class="btn-item frw" :class="prevEnable == true?'':'disable'" v-html=footerData.prevTxt @click="prevEnable == true?PrevPage():''" ></div>
        <div class="btn-item frw" :class="nextEnable == true?'':'disable'" v-html=footerData.forwardTxt @click="nextEnable == true?nextPage(footerData.forwardVal):''"></div>
        <div class="btn-item frw" :class="submitStatus == true?'':'disable'" @click="submitStatus == true?checkSubmitStatus():''"  v-html=footerData.submitTxt ></div>
@@ -27,7 +27,12 @@ Vue.component("footer-panel", {
     nextPage:function(){
       // document.getElementById("navText").value = forwardBtnVal;
       // document.getElementById("forwardbutton").click();
-      this.$parent.NextPageBtnClckParent();//calling parent
+   
+      if(this.footerData.totalQues==this.footerData.answrdQues){
+        this.$parent.NextPageBtnClckParent();//calling parent
+      }else{
+        document.getElementById("errorDiv").style.visibility="visible"
+      }
     },
     PrevPage:function(){
       this.$parent.PrevPageBtnClckParent();//calling parent
@@ -41,19 +46,25 @@ Vue.component("footer-panel", {
     enableSubmit:function(){
       this.submitStatus = true;
     },
+    disableSubmit:function(){
+      this.submitStatus = false;
+    },
     checkSubmitStatus:function(){
       document.getElementById("left-panel-menu-slctn").value = this.footerData.submitVal;
       document.getElementById("left-panel-subMenu-slctn").value = this.footerData.submitVal;
       document.getElementById("forwardbutton").click();
     },
+    updateSubmitinFooter:function(totalAnswered,totalQuestions){
+      if(totalAnswered == totalQuestions){
+        this.enableSubmit();
+      }else{
+        this.disableSubmit();
+      }
+    },
     setSectionQuestions:function(sectionAnswered,sectionQuestions){
       document.querySelector("#ttl-attmpt").value = sectionAnswered;
       this.footerData.answrdQues = sectionAnswered;
       this.footerData.totalQues = sectionQuestions;
-
-      if(sectionAnswered == this.footerData.totalQues){
-        this.enableSubmit();
-      }
     }
     
   }

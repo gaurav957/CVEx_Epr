@@ -10,6 +10,12 @@
 @import './partials/leftpanel';
 @import './partials/input-control';
 
+.error-message{
+    color:red;
+    font-size: 12px;
+    margin: 10px;
+    visibility: hidden;
+  }
 
 
 
