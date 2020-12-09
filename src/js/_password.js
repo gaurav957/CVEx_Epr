@@ -6,28 +6,33 @@ Vue.component("password", {
       inputVal : ""
     };
   },
-  template: `  <div class="assessment-intro">  
-    <div class="cst-container">  
-     <div class="survey-intro">
-     <div class="introduction-title" v-html="JsonData.heading"></div>                       
-  
-          <div class="intro-panel"> 
-                <div class="password-inner clearfix">
-                <div :style="[isInvalid==true ?{'visibility':'visible'}:{'visibility':'hidden'}]" class="validated-error"  v-html="JsonData.Error">There is an error</div>
-                   <div v-for="(input, index) in JsonData.inputFields" class="">                
-                     <label class="lbl-control" :for="'qual_'+ index" v-html="input.label"></label> 
-                     <input class="cst-form-control" v-if="input.inputType=='text'" :id="'qual_'+ index"
-                       @input="handleInput(input.inputId,index, $event)" 
-                     :placeholder="input.placeholder" type="password"/>                    
-                     </div>
-                </div>
+  template: `<div class="assessment-intro">  
+  <div class="cst-container">  
+   <div class="survey-intro center-align">
+   <div class="introduction-title" v-html="JsonData.heading"></div>   
+        <div class="intro-panel" v-html="JsonData.content"></div>
+              <div class="password-inner clearfix">
+              <div :style="[isInvalid==true ?{'visibility':'visible'}:{'visibility':'hidden'}]" class="validated-error"  v-html="JsonData.Error">There is an error</div>
+                 <div v-for="(input, index) in JsonData.inputFields" class="">                
+                   <label class="lbl-control" :for="'qual_'+ index" v-html="input.label"></label> 
+                   <input class="cst-form-control" v-if="input.inputType=='text'" :id="'qual_'+ index"
+                     @input="handleInput(input.inputId,index, $event)" 
+                   :placeholder="input.placeholder" type="password"/>                    
+                   </div>
+              </div>
+       
+          <div class="survey-begin txt-center">
+              <div class="btn-item frw" @click="handleForward" v-html="JsonData.frdBtnTxt"></div>
+           </div>
+           <div class="email-inner">
+              <div class="email-instruction" v-html="JsonData.emailInstruct">  </div>                      
+              <div class="email-url"> 
+              <a :href="JsonData.emailUrl" v-html="JsonData.emailUrlText"></a>
+              </div> 
             </div>
-            <div class="survey-begin txt-center">
-                <div class="btn-item frw" @click="handleForward" v-html="JsonData.frdBtnTxt"></div>
-             </div>
-        </div>
-     </div>
- </div>`,
+      </div>
+   </div>
+</div>`,
 
   mounted: function () {
     // console.log(this.isInvalid);

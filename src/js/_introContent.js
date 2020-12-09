@@ -2,7 +2,7 @@ Vue.component("intro-content", {
   props: ["JsonData"],
   template: `<div class="assessment-intro">  
                <div class="cst-container">  
-                <div class="survey-intro">
+                <div class="survey-intro center-align">
                     <div class="introduction-title" v-html="JsonData.heading">
                     </div>
                     <div class="intro-panel" v-html="JsonData.content">                       

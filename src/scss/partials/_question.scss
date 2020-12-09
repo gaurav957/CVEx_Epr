@@ -228,9 +228,9 @@ display: none;
 .question-resize{
     margin-bottom:15px;
     .survey-info {
-        font-size: 0.85em;
+        font-size: 1em;
         margin-bottom: 25px;
-        line-height: 24px;
+        line-height: 22px;
         .survey-info-messg{
             color: $drak-gray;
             font-weight: bold;
@@ -368,10 +368,11 @@ display: none;
         color: $white;
     }   
 }
-.tt-ans{
+.tt-ans{   
     // color: $btn-border;
     // font-weight: bold;
     // background: $e1-clr;
+    display: none;
     padding: 9px 15px;
     font-size: 0.85em;
      @media (min-width:481px){

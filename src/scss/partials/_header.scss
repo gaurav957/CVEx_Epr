@@ -44,6 +44,9 @@
       & >div{
         width: 100%;
         font-size: 1.2em;
+         & > h3{
+          text-shadow:-1px 5px 3px rgba(0, 0, 0, 0.40);
+         }
         @media (max-width:1024px){
           font-size: 1em;
         }
@@ -335,8 +338,7 @@
 .intro-nav{
 
   position: relative;  
-  height: 20vh;
-  min-height: 100px;
+  height: 90px;
   @extend %intro-header; 
   @media (max-width:1024px){
     height: 12vh;
@@ -344,7 +346,7 @@
     background-size: cover;
   }
   .brand-inner{
-    padding-top: 35px;
+    padding-top: 25px;
 
       .mck-brand{
         width: 150px;
@@ -371,9 +373,10 @@
     }
     @media (max-width:481px){
       width: 90%;
-      bottom: -60px;
+      // bottom: -60px;
     }
      .title-banner{
+       display: none;
         > img{
           max-width: 100%;
           display: block;

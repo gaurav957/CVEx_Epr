@@ -133,7 +133,7 @@ p {
       font-size: 0.9em;
     }
   }
-  .intro-panel {
+  .intro-panel {  
     color: $black;
     font-size: 0.85em;
     @media (max-width: 481px) {
@@ -152,7 +152,7 @@ p {
     .email-url {
       & > a {
         color: $light-blue;
-        font-size: 0.85em;
+        font-size: 1em;
         transition: all 0.1s linear;
         &:hover {
           color: #6283ff;
@@ -161,17 +161,17 @@ p {
     }
   }
   .survey-intro {
-    padding-right: 10px !important;
+    padding-right:20px !important;
   }
 }
 .survey-intro {
-  height: calc(100vh - 280px);
+  height: calc(100vh - 260px);
   padding-right: 15px;
   overflow-y: auto;
   &.thnk-you {
-    height: calc(100vh - 310px);
+    height: calc(100vh - 260px);
     @media (max-width: 1024px) {
-      height: calc(100vh -340px);
+      height: calc(100vh - 265px);
     }
   }
   @media (max-width: 1024px) {
@@ -186,6 +186,7 @@ p {
   max-width: 100%;
   margin-bottom: 5px;
   color: $light-black;
+  font-size: 0.85em;
 }
 .cst-form-control {
   width: 100%;
@@ -466,6 +467,15 @@ input[type="number"] {
     background-size: 100% 100%;
   }
 }
+
+.center-align{  
+  width: 63%;
+  margin: 0px auto;
+   @media all and (max-width:767px){
+    width: 100%;
+   }
+}
+
 
 .thankyou-content {
   margin: 40px auto 30px;
