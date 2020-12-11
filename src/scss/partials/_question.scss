@@ -18,7 +18,7 @@
 .progress-panel {
   width: 100%;
   .progress {
-    width: calc(100% - 500px);
+    width: calc(100% - 0px);
     float: left;
     margin-top: 12px;
     .perc-data {
@@ -32,7 +32,7 @@
       }
     }
     .progress-bar {
-      width: calc(80% - 200px);
+      width: calc(97.5% - 202px);
       display: inline-block;
       @media (max-width: 1024px) {
         width: 100%;

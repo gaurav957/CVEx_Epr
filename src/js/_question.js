@@ -262,7 +262,7 @@ Vue.component("progress-panel", {
                     </div>
                 </div>
             </div>
-            <div class='btn-outer'>
+            <div class='btn-outer' style="display:none">
             <!--save-->
               <div class='btn-item frw' v-if="this.curGroup==false" v-html='progressData.groupTxt' @click="groupit()">Save</div>
               <div class='btn-item frw' v-if="this.curGroup==true" v-html='progressData.unGroupTxt' @click="ungroupit()">Save</div>
