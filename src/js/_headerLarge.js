@@ -6,13 +6,13 @@ Vue.component('header-large', {
             <div class="brand-inner clearfix">
                 <div class="mck-brand"><img width="150" height="48" 
                 :src="JsonData.logo"
-                alt="Mckinsey" title="Mckinsey"></div>          
+                alt="Mckinsey" title="Mckinsey">
+                <div class="header-title" v-html="JsonData.title"></div>          
 
             </div> 
             <div class="intro-title-container">
                 <div class="title-banner"><img :src="JsonData.banner"></div>
-                <div class="intro-title" v-html="JsonData.title">
-                    
+                <!--<div class="intro-title" v-html="JsonData.title"></div>-->
                 </div>
                </div>          
 

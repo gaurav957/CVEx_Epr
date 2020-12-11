@@ -8,8 +8,9 @@ Vue.component("registration", {
   },
   template: `  <div class="assessment-intro">  
     <div class="cst-container">  
-     <div class="survey-intro">
-     <div class="introduction-title" v-html="JsonData.heading"></div>                       
+     <div class="survey-intro">     
+     <div class="introduction-title" v-html="JsonData.heading"></div>  
+     <div class="registrationHint-text" v-html="JsonData.registrationHintText"></div>                     
      <div :style="[isInvalid==true ?{'visibility':'visible'}:{'visibility':'hidden'}]" class="validated-error"  v-html="JsonData.Error">There is an error</div>
      <div :style="[isEmailValid==false ?{'visibility':'visible'}:{'visibility':'hidden'}]" class="validated-error" v-html="JsonData.emailError">Email is invalid</div>
      <div class="intro-panel"> 

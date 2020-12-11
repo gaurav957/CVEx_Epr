@@ -119,7 +119,7 @@ p {
   }
 }
 .assessment-intro {
-  padding-top: 80px;
+  padding-top: 40px;
   font-size: 1em;
   @media (max-width: 481px) {
     padding-top: 95px;
@@ -133,12 +133,16 @@ p {
       font-size: 0.9em;
     }
   }
-  .intro-panel {  
+  .intro-panel {
     color: $black;
     font-size: 0.85em;
     @media (max-width: 481px) {
       font-size: 0.9em;
     }
+  }
+  .registrationHint-text {
+    margin-top: 20px;
+    font-size: 0.85em;
   }
   .email-inner {
     max-width: 100%;
@@ -161,7 +165,7 @@ p {
     }
   }
   .survey-intro {
-    padding-right:20px !important;
+    padding-right: 20px !important;
   }
 }
 .survey-intro {
@@ -191,9 +195,9 @@ p {
 .cst-form-control {
   width: 100%;
   border: 1px solid $input-bor;
-  height: 36px;/* A_B */
+  height: 36px; /* A_B */
   padding: 6px 12px;
-  font-size: 0.85em;/* A_B */
+  font-size: 0.85em; /* A_B */
   color: $drak-gray;
   @include box-shadow(0, 1px, 1px, rgba(0, 0, 0, 0.075), inset);
   @include transition(
@@ -220,12 +224,12 @@ p {
   width: 50%;
   margin: 0 auto;
   max-width: 100%;
-  @media (max-width:767px){
+  @media (max-width: 767px) {
     width: 100%;
   }
-    .validated-error{
-      padding-left: 0;
-    }
+  .validated-error {
+    padding-left: 0;
+  }
 }
 .other-type-row ::-webkit-input-placeholder,
 .cst-form-control ::-webkit-input-placeholder {
@@ -461,21 +465,24 @@ input[type="number"] {
   text-align: center;
   .img {
     @extend %result;
-    width: 200px;
-    height: 190px;
+    width: 450px;
+    height: 125px;
     margin: 0 auto;
-    background-size: 100% 100%;
+    background-size: 100% auto;
+    @media (max-width: 1025px) {
+      width: 320px;
+      height: 100px;
+    }
   }
 }
 
-.center-align{  
+.center-align {
   width: 63%;
   margin: 0px auto;
-   @media all and (max-width:767px){
+  @media all and (max-width: 767px) {
     width: 100%;
-   }
+  }
 }
-
 
 .thankyou-content {
   margin: 40px auto 30px;
