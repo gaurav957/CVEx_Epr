@@ -3,7 +3,8 @@ Vue.component("password", {
   data: function () {
     return {
       isInvalid: false,
-      inputVal : ""
+      inputVal : "",
+      errorGlob:""
     };
   },
   template: `<div class="assessment-intro">  
@@ -12,12 +13,12 @@ Vue.component("password", {
    <div class="introduction-title" v-html="JsonData.heading"></div>   
         <div class="intro-panel" v-html="JsonData.content"></div>
               <div class="password-inner clearfix">
-              <div :style="[isInvalid==true ?{'visibility':'visible'}:{'visibility':'hidden'}]" class="validated-error"  v-html="JsonData.Error">There is an error</div>
+              <div class="validated-error"  v-html="errorGlob"></div>
                  <div v-for="(input, index) in JsonData.inputFields" class="">                
                    <label class="lbl-control" :for="'qual_'+ index" v-html="input.label"></label> 
                    <input class="cst-form-control" v-if="input.inputType=='text'" :id="'qual_'+ index"
                      @input="handleInput(input.inputId,index, $event)" 
-                   :placeholder="input.placeholder" type="password"/>                    
+                   :placeholder="input.placeholder" type="password" />                    
                    </div>
               </div>
        
@@ -35,7 +36,9 @@ Vue.component("password", {
 </div>`,
 
   mounted: function () {
-    // console.log(this.isInvalid);
+    //
+    this.errorGlob= document.getElementById("QPassword_error").innerHTML;
+    //console.log(ddddc);
   },
   methods: {
     handleSelect: function (index, e) {
@@ -60,15 +63,16 @@ Vue.component("password", {
       //   document.getElementById("forwardbutton").click();
       // }
 
-      if(this.JsonData.inputFields[0].inputVal == this.inputVal){
+      /*if(this.JsonData.inputFields[0].inputVal == this.inputVal){
         this.isInvalid = false;
         console.log("filled")
         document.getElementById("forwardbutton").click();
       }else{
         this.isInvalid = true;
         console.log("error")
-      }
-
+      }*/
+      document.getElementById("forwardbutton").click();
+      console.log("click")
     },
     handleInput: function (id, index, e) {
       // if (!/^[1-9]+[0-9]*$/.test(e.target.value)) {
@@ -80,6 +84,8 @@ Vue.component("password", {
       // this.JsonData.inputFields[index].inputVal = e.target.value;
 
       this.inputVal = e.target.value;
+      document.getElementById("QPassword").value=this.inputVal;
+      //document.getElementById("forwardbutton").click();
       console.log(this.inputVal)
     },
   },
